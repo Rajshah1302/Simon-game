@@ -4,6 +4,7 @@ var userClickedPattern = [];
 var buttonColours = ["red", "green", "blue", "yellow"];
 var randomChosenColour;
 
+
 var level = 0;
 var clicks = 0;
 var flag = 0;
