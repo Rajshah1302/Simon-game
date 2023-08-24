@@ -61,8 +61,17 @@ $(document).on("keydown", function (params) {
   if (flag === 0) {
     game();
     flag++;
+    $(".play").hide();
   }
 });
+
+$(".play").on("click", function (params) {
+  if (flag === 0) {
+    game();
+    flag++;
+    $(".play").hide();
+  }
+})
 
 function checkAnswer() {
   for (var i = 0; i < userClickedPattern.length; i++) {
@@ -74,6 +83,7 @@ function checkAnswer() {
       $("h1").text("Game Over");
       flag = 0;
       level = 0;
+      $(".play").show();
       return; // Exit the function early on wrong answer
     }
   }
